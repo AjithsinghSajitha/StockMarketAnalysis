@@ -3,7 +3,7 @@ export default async function getStocksProfile() {
   try {
     let res = await fetch(url);
     let data = await res.json();
-    return data;
+    return data.stocksProfileData;
   } catch (error) {
     console.log("Error:", error);
   }

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkblue;
+}
+
+a {
+  text-decoration: none;
+  background: white;
+  padding: 5px;
+}
+
+header {
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+main {
+  display: flex;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:active {
+  color: rgb(0, 132, 255);
+}
+
+#chart-area {
+  width: 70%;
+}
+
+.stat {
+  margin-top: 10px;
+}
+
+.stat span {
+  margin-left: 10px;
+}

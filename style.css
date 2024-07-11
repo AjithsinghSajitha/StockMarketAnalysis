@@ -30,6 +30,14 @@ a:visited {
 a:active {
   color: rgb(0, 132, 255);
 }
+button{
+    background-color: #00bcd454;
+    border: none;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
 
 #chart-area {
   width: 70%;

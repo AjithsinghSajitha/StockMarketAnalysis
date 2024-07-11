@@ -1,7 +1,6 @@
+const ctx = document.getElementById('myChart');
 export default function renderChart(x,y){
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
+     let lineChart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: x,
@@ -19,5 +18,6 @@ export default function renderChart(x,y){
         }
       }
     });
+    return lineChart;
 }
 

@@ -7,5 +7,4 @@ export default async function getStocksProfile() {
   } catch (error) {
     console.log("Error:", error);
   }
-  
 }

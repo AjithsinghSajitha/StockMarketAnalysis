@@ -1,10 +1,8 @@
-import renderChart from "./lineChart.mjs";
-import getStocks from "../data/getStocks.mjs";
+import { newChart } from "./newChart.mjs";
 
 let duration = "1mo";
-let chartData = await getStocks();
 
-function durationButtons(chartObject) {
+function durationButtons() {
   let buttons = [
     { duration: "1 Month", dataValue: "1mo" },
     { duration: "3 Month", dataValue: "3mo" },
@@ -18,11 +16,7 @@ function durationButtons(chartObject) {
     button.innerText = item.duration;
     button.addEventListener("click", () => {
       duration = item.dataValue;
-      chartObject.destroy();
-      let chartX = chartData.AAPL[duration].timeStamp;
-      let chartY = chartData.AAPL[duration].value;
-
-      chartObject = renderChart(chartX, chartY);
+      newChart();
     });
     durationDiv.append(button);
   });

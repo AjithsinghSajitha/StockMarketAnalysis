@@ -7,5 +7,4 @@ export default async function getStocks() {
   } catch (error) {
     console.log("Error:", error);
   }
-  
 }

@@ -9,8 +9,11 @@ function newChart() {
 
   let chartX = chartData[stockName][duration].timeStamp;
   let chartY = chartData[stockName][duration].value;
+  let newXValue = chartX.map((timeStamp) =>
+    new Date(timeStamp * 1000).toLocaleDateString()
+  );
 
-  globalThis.chartObject = renderChart(chartX, chartY);
+  globalThis.chartObject = renderChart(newXValue, chartY);
 }
 
 export { newChart };

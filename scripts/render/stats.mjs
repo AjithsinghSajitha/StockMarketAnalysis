@@ -10,14 +10,16 @@ function stats(data) {
     let anchor = document.createElement("a");
     let valueSpan = document.createElement("span");
     let profitSpan = document.createElement("span");
+    let bookValue = parseFloat(data[key].bookValue);
+    let profit = parseFloat(data[key].profit);
     let color;
 
     data[key].profit > 0 ? (color = "#07ff1c") : (color = "red");
     anchor.setAttribute("href", "#");
     valueSpan.setAttribute("style", "color: white;");
-    valueSpan.innerText = data[key].bookValue.toFixed(2);
+    valueSpan.innerText = bookValue.toFixed(2);
     profitSpan.setAttribute("style", `color: ${color};`);
-    profitSpan.innerText = data[key].profit.toFixed(2) + "%";
+    profitSpan.innerText = profit.toFixed(2) + "%";
     div.classList.add("stat");
 
     if (key != "_id") {

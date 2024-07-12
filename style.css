@@ -1,42 +1,60 @@
+:root{
+  --small: 5px;
+  --medium: 10px;
+  --large: 25px;
+
+  --white: white;
+  --blue: blue;
+  --lightblue: rgb(0, 132, 255);
+  
+  --bodyBackground: darkblue;
+  --button-background: #00bcd454;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: darkblue;
+  background-color: var(--bodyBackground);
 }
 
 a {
   text-decoration: none;
-  background: white;
-  padding: 5px;
+  background: var(--white);
+  padding: var(--small);
 }
 
 header {
-  color: white;
+  color: var(--white);
   text-align: center;
-  padding: 25px;
+  padding: var(--large);
 }
 
 main {
   display: flex;
 }
 
+aside{
+  margin-top: var(--large);
+  margin-left: var(--large);
+}
+
 a:visited {
-  color: blue;
+  color: var(--blue);;
 }
 
 a:active {
-  color: rgb(0, 132, 255);
+  color: var(--lightblue);
 }
 button{
-    background-color: #00bcd454;
+    background-color: var(--button-background);
     border: none;
-    padding: 5px;
-    color: white;
+    padding: var(--small);
+    color: var(--white);
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: var(--small);
 }
 
 #chart-area {
@@ -44,9 +62,9 @@ button{
 }
 
 .stat {
-  margin-top: 10px;
+  margin-top: var(--medium);
 }
 
 .stat span {
-  margin-left: 10px;
+  margin-left: var(--medium);
 }

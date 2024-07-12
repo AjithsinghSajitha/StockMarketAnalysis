@@ -15,9 +15,9 @@ function stats(data) {
     data[key].profit > 0 ? (color = "#07ff1c") : (color = "red");
     anchor.setAttribute("href", "#");
     valueSpan.setAttribute("style", "color: white;");
-    valueSpan.innerText = data[key].bookValue;
+    valueSpan.innerText = data[key].bookValue.toFixed(2);
     profitSpan.setAttribute("style", `color: ${color};`);
-    profitSpan.innerText = data[key].profit + "%";
+    profitSpan.innerText = data[key].profit.toFixed(2) + "%";
     div.classList.add("stat");
 
     if (key != "_id") {

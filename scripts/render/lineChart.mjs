@@ -34,6 +34,9 @@ export default function renderChart(x, y, label = "Loading...") {
             color: "white",
             font: { size: 12, weight: "bold" },
           },
+          grid: {
+            color: "#03a9f48a",
+          },
         },
         y: {
           beginAtZero: false,
@@ -46,6 +49,9 @@ export default function renderChart(x, y, label = "Loading...") {
           ticks: {
             color: "white",
             font: { size: 12, weight: "bold" },
+          },
+          grid: {
+            color: "#03a9f48a",
           },
         },
       },

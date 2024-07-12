@@ -7,5 +7,5 @@ let data = await getStockStats();
 globalThis.chartObject = undefined;
 
 newChart();
-stats(data);
 durationButtons();
+stats(data);

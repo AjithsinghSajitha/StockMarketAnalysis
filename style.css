@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root{
   --small: 5px;
   --medium: 10px;
@@ -34,11 +36,12 @@ header {
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 aside{
-  margin-top: var(--large);
-  margin-left: var(--large);
+  margin-top: calc(var(--large));
+  margin-left: calc(var(--large) * 4);
 }
 
 a:visited {
@@ -56,9 +59,20 @@ button{
     cursor: pointer;
     margin-right: var(--small);
 }
+#profile{
+  color: var(--white);
+  margin-top: var(--large);
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
 
 #chart-area {
   width: 70%;
+}
+
+.wrapper{
+  width: 80%;
+  margin: auto;
 }
 
 .stat {

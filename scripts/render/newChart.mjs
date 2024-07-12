@@ -1,6 +1,6 @@
 import renderChart from "./lineChart.mjs";
 import getStocks from "../data/getStocks.mjs";
-import { duration } from "./durationButtons.mjs";
+import { duration, durationString } from "./durationButtons.mjs";
 import { stockName } from "./stats.mjs";
 let chartData = await getStocks();
 
@@ -13,7 +13,7 @@ function newChart() {
     new Date(timeStamp * 1000).toLocaleDateString()
   );
 
-  globalThis.chartObject = renderChart(newXValue, chartY);
+  globalThis.chartObject = renderChart(newXValue, chartY, `${durationString} Data From ${stockName}`);
 }
 
 export { newChart };

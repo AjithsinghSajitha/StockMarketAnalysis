@@ -8,16 +8,20 @@
   </head>
   <body>
     <div class="wrapper">
-    <header><h1>Stock Market Analysis</h1></header>
-    <main>
-      <div id="chart-area">
-        <canvas id="myChart"></canvas>
-        <div id="duration"></div>
-        <div id="profile"></div>
-      </div>
-      <aside id="stats"></aside>
-    </main>
-  </div>
+      <header><h1>Stock Market Analysis</h1></header>
+      <main>
+        <div id="chart-area">
+          <canvas id="myChart"></canvas>
+          <div class="btn-group">
+            <div id="duration">
+            </div>
+            <div><span class="red"></span> The lowest margin <span class="green"></span> The highest margin</div>
+          </div>
+          <div id="profile"></div>
+        </div>
+        <aside id="stats"></aside>
+      </main>
+    </div>
     <script type="module" src="index.mjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>

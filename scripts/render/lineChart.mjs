@@ -1,5 +1,10 @@
 const ctx = document.getElementById("myChart");
 export default function renderChart(x, y, label = "Loading...") {
+  const maxValue = Math.max(...y);
+  const maxIndex = y.indexOf(maxValue);
+  const minValue = Math.min(...y);
+  const minIndex = y.indexOf(minValue);
+
   let lineChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -8,12 +13,21 @@ export default function renderChart(x, y, label = "Loading...") {
         {
           label: label,
           data: y,
-          backgroundColor: "white",
+          backgroundColor: y.map((value, index) =>
+            index === maxIndex ? "green" : index === minIndex ? "red" : "white"
+          ),
           borderColor: "white",
+          borderWidth: 1,
         },
       ],
     },
     options: {
+      elements: {
+        point: {
+          pointStyle: "circle",
+          radius: 5,
+        },
+      },
       plugins: {
         legend: {
           labels: {

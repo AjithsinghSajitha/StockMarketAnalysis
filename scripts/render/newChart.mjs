@@ -13,7 +13,11 @@ function newChart() {
     new Date(timeStamp * 1000).toLocaleDateString()
   );
 
-  globalThis.chartObject = renderChart(newXValue, chartY, `${durationString} Data From ${stockName}`);
+  globalThis.chartObject = renderChart(
+    newXValue,
+    chartY,
+    `${durationString} Data From ${stockName}`
+  );
 }
 
 export { newChart };

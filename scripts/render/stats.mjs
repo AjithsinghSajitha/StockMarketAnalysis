@@ -1,20 +1,20 @@
 import { newChart } from "./newChart.mjs";
 import getStocksProfile from "../data/getStocksProfile.mjs";
 
-let stockName = "AAPL";
+let stockName = "GOOGL";
 let profileData = await getStocksProfile();
 
 function stats(data) {
   let stats = document.getElementById("stats");
   let profile = document.getElementById("profile");
 
-  profile.innerText = profileData[stockName].summary;   
+  profile.innerText = profileData[stockName].summary;
 
   for (const key in data) {
     let div = document.createElement("div");
     let anchor = document.createElement("a");
     let valueSpan = document.createElement("span");
-    let profitSpan = document.createElement("span"); 
+    let profitSpan = document.createElement("span");
     let bookValue = parseFloat(data[key].bookValue);
     let profit = parseFloat(data[key].profit);
     let color;

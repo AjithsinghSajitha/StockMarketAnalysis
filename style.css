@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-:root{
+:root {
   --small: 5px;
   --medium: 10px;
   --large: 25px;
@@ -8,7 +8,7 @@
   --white: white;
   --blue: blue;
   --lightblue: rgb(0, 132, 255);
-  
+
   --bodyBackground: darkblue;
   --button-background: #00bcd454;
 }
@@ -39,27 +39,27 @@ main {
   justify-content: center;
 }
 
-aside{
+aside {
   margin-top: calc(var(--large));
   margin-left: calc(var(--large) * 4);
 }
 
 a:visited {
-  color: var(--blue);;
+  color: var(--blue);
 }
 
 a:active {
   color: var(--lightblue);
 }
-button{
-    background-color: var(--button-background);
-    border: none;
-    padding: var(--small);
-    color: var(--white);
-    cursor: pointer;
-    margin-right: var(--small);
+button {
+  background-color: var(--button-background);
+  border: none;
+  padding: var(--small);
+  color: var(--white);
+  cursor: pointer;
+  margin-right: var(--small);
 }
-#profile{
+#profile {
   color: var(--white);
   margin-top: var(--large);
   font-family: "Roboto", sans-serif;
@@ -70,7 +70,7 @@ button{
   width: 70%;
 }
 
-.wrapper{
+.wrapper {
   width: 80%;
   margin: auto;
 }
@@ -81,4 +81,29 @@ button{
 
 .stat span {
   margin-left: var(--medium);
+}
+.btn-group{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+}
+
+.red,
+.green {
+  display: inline-block;
+  width: var(--medium);
+  height: var(--medium);
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: var(--small);
+  margin-left: var(--medium);
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
 }

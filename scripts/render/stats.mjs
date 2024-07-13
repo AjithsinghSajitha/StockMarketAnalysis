@@ -7,7 +7,9 @@ let profileData = await getStocksProfile();
 function stats(data) {
   let stats = document.getElementById("stats");
   let profile = document.getElementById("profile");
+  let profileHeader = document.getElementById('profile-header');
 
+  profileHeader.innerHTML = `<h2>${stockName}&nbsp&nbsp<span style="color: green;">${data[stockName].profit.toFixed(2)}%&nbsp&nbsp</span>$${data[stockName].bookValue.toFixed(2)}</h2>`;
   profile.innerText = profileData[stockName].summary;
 
   for (const key in data) {
@@ -22,7 +24,7 @@ function stats(data) {
     data[key].profit > 0 ? (color = "#07ff1c") : (color = "red");
     anchor.setAttribute("href", "#");
     valueSpan.setAttribute("style", "color: white;");
-    valueSpan.innerText = bookValue.toFixed(2);
+    valueSpan.innerText = "$" + bookValue.toFixed(2);
     profitSpan.setAttribute("style", `color: ${color};`);
     profitSpan.innerText = profit.toFixed(2) + "%";
     div.classList.add("stat");
@@ -32,6 +34,7 @@ function stats(data) {
         stockName = key;
         newChart();
         profile.innerText = profileData[stockName].summary;
+        profileHeader.innerHTML = `<h2>${stockName}&nbsp&nbsp<span style="color: ${color};">${data[stockName].profit.toFixed(2)}%&nbsp&nbsp</span>$${data[stockName].bookValue.toFixed(2)}</h2>`;
       });
 
       anchor.innerText = key;

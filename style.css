@@ -59,6 +59,12 @@ button {
   cursor: pointer;
   margin-right: var(--small);
 }
+
+#profile-header{
+  color: var(--white);
+  margin-top: var(--large);
+}
+
 #profile {
   color: var(--white);
   margin-top: var(--large);
